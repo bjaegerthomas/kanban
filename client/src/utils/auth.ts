@@ -4,13 +4,11 @@ class AuthService {
   getProfile() {
 
     return jwtDecode<UserData>(this.getToken());
-    console.log('Profile: ', profile);
   }
 
   loggedIn() {
     const token = this.getToken();
     return !!token && !this.isTokenExpired(token);
-    console.log('Logged in: ', loggedIn);
   }
   
   isTokenExpired(token: string) {
@@ -31,19 +29,16 @@ class AuthService {
   getToken(): string {
     const loggedUser = localStorage.getItem('id_token') || '';
     return loggedUser;
-    console.log('Token: ', token);
   }
 
   login(idToken: string) {
     localStorage.setItem('id_token', idToken);
     window.location.assign('/');
-    console.log('Logged in: ', idToken
   }
 
   logout() {
     localStorage.removeItem('id_token');
     window.location.assign('/');
-    console.log('Logged out');
   }
 }
 
