@@ -8,9 +8,9 @@ import routes from './routes/index.js';
 import { sequelize } from './models/index.js';
 
 const app = express();
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || '0.0.0.0';
 
-app.use(express.static('../client/src'));
+app.use(express.static('../client/dist'));
 
 app.use(express.json());
 app.use(routes);
