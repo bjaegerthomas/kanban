@@ -21,6 +21,8 @@
   From there you will want to cd to the local repo you just cloned and do an npm install.
   Then npm run build and then npm run server to get it up and runniing locally.
 
+  To login you can use one of three login names: JollyGuru, SunnyScribe, or RadiantComet and password is password for all three.
+
   ## Contribution
   After cloning the repository be sure to create a new branch for your feature or fix.
   Make your changes and commit them with descriptive messages.
